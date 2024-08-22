@@ -5,7 +5,7 @@ ope = input("Enter Operaton: ")
 
 match ope:
     case '+':
-        print(f"Ans is {n1+n2}")
+        print(f"Ans is {n1-(-n2)}")
     case '-':
         print(f"Ans is {n1 - n2}")
     case '*':
