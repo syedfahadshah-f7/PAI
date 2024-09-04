@@ -1,0 +1,10 @@
+name = input("Enter Name: ")
+CNIC = input("Enter CNIC Number: ")
+age = int(input("Enter Age: "))
+salary = float(input("Enter Salary: "))
+
+f = open("temp4.txt","w")
+f.write(f"Name: {name} \n CNIC: {CNIC}\n Age: {age} \n Salary: {salary}\n")
+Contact = int(input("Enter Contact Number: "))
+f.write(f"Contact: {Contact}\n")
+f.close()
