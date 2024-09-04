@@ -1,4 +1,4 @@
-# Take input and split it into lists
+
 list1 = input("Enter list 1 elements (space-separated): ").split(" ")
 list2 = input("Enter list 2 elements (space-separated): ").split(" ")
 
