@@ -1,0 +1,4 @@
+Name: fahad 
+ CNIC: 7788
+ Age: 19 
+ Salary: 26473.0Contact: 9999
