@@ -4,8 +4,11 @@ def correct_sentence():
         content = f.read()
         f.close()
         print(f"Original content: {content}")
-        
-        corrected_content = content.replace('N', 'M')
+        word = input("Enter Word to Change: ")
+        old_char = input("Enter character to Change: ")
+        new_char = input("Enter new character: ")
+        new_word = word.replace(old_char,new_char)
+        corrected_content = content.replace(word,new_word)
 
         print(f"Corrected content: {corrected_content}")
         return corrected_content
