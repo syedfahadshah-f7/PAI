@@ -7,7 +7,10 @@ class Restaurant:
         self.menu.append(item)
         
     def booked_tables(self,TableNum):
-        self.book_tables["Table " + str(TableNum)] = "booked"
+        if book_tables["Table " + str(TableNum)] == "booked" :
+            print("Table is already booked !!")
+        else:
+            self.book_tables["Table " + str(TableNum)] = "booked"
         
     def customer_order(self,item,quantity):
         self.order[item] = quantity
