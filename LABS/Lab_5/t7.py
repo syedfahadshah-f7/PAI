@@ -5,10 +5,14 @@ text = '''In today’s digital world communication is key Many professionals pre
   For support you can always email support@service.org Lastly for newsletters consider signing up with info@company.net
  '''
 
-Splitlist = re.split(" ", text)
-emails = []
+pattern = r'[A-Z|a-z|0-9|.]{1,}+@[A-Z|a-z|0-9]{1,}.[A-Z|a-z|0-9]{1,}'
 
-for i in Splitlist:
-    if re.search(".com", i):
-        emails.append(i)
-print(emails)
+# pattern = r'\w{1,}+@\w{1,}+.\w{1,}'
+searched = re.findall(pattern, text)
+print(searched)
+
+
+
+
+
+
