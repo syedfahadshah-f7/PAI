@@ -36,12 +36,12 @@ class SeniorManager(Manager):
         self.salary += self.salary * 0.3
         print(f"Salary with bonus of Senior Manager is {self.salary}")
 
-m = Manager('Raghib',1000)
-d = Developer('Rizwan',1000)
-s = SeniorManager('Rabani',1000)
+manager = Manager('Fahad',1000)
+developer = Developer('Umar',1000)
+senior = SeniorManager('Abdul Rahman',1000)
 
-m.calculateBonus()
-m.hire()
-d.calculateBonus()
-d.writeCode()
-s.calculateBonus()
+developer.calculateBonus()
+developer.writeCode()
+manager .calculateBonus()
+manager .hire()
+senior.calculateBonus()
