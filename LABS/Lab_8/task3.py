@@ -1,18 +1,16 @@
 import numpy as np
 
-arr = np.arange(2,19,2)
+arr = np.arange(2,19,2).reshape(3,3)
 
-a = arr.reshape(3,3)
-
-def mul(x,y):
+def multiply(x,y):
     return x*y
 
-myMul = np.frompyfunc(mul,2,1)
+MUL_Func = np.frompyfunc(multiply,2,1)
 
-b = myMul(a,4)
+newarr = MUL_Func(arr,4)
 
-c = np.multiply(np.eye(3,3),b)
+brr = np.multiply(np.eye(3,3),newarr)
 
-print(a,'\n')
-print(b,'\n')
-print(c)
+print(arr,'\n')
+print(newarr,'\n')
+print(brr)
