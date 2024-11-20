@@ -33,8 +33,12 @@ xtrain,xtest = train_test_split(data_scaled,test_size=0.25,random_state=42)
 # plt.show()
 
 
-kmean = KMeans(3,random_state=42)
-kmean.fit(xtrain)
-pred = kmean.predict(xtest)
-labels = kmean.labels_
-adjusted_mutual_info_score(pred,labels)
+kmean = KMeans(3,init='k-means++')
+kmean.fit(data_scaled)
+pred = kmean.predict(data_scaled)
+# labels = kmean.labels_
+# adjusted_mutual_info_score(pred,labels)
+frame = pd.DataFrame(data_scaled)
+
+frame['cluster'] = pred
+frame['cluster'].value_counts()
